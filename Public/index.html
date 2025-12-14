@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manipur State Archives - Preserving Our Heritage, Empowering Our Future. Access historical documents, photographs, and manuscripts from Manipur's rich history.">
+    <meta name="keywords" content="Manipur Archives, Historical Documents, Manipur History, Digital Archives, State Archives, Heritage Preservation">
+    <meta property="og:title" content="Manipur State Archives">
+    <meta property="og:description" content="Preserving Our Heritage, Empowering Our Future">
+    <meta property="og:type" content="website">
+    <title>Manipur State Archives - Preserving Our Heritage, Empowering Our Future</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ===== Government Bar ===== -->
+    <div class="gov-bar">
+        <div class="container">
+            <div class="gov-bar-content d-flex flex-row">
+                <div class="gov-links ">
+                    
+                    <a href="#" onclick="document.getElementById('navMenu').focus(); return false;">Skip to Main Menu</a>
+                    <span class="separator">|</span>
+                    <a href="#main-content">Skip to content</a>
+                </div>
+                <div class="accessibility-controls">
+                    <span class="access-label">Screen Reader Access</span>
+                    <button class="font-btn" onclick="changeFontSize('decrease')" title="Decrease font size">A-</button>
+                    <button class="font-btn" onclick="changeFontSize('normal')" title="Normal font size">A</button>
+                    <button class="font-btn" onclick="changeFontSize('increase')" title="Increase font size">A+</button>
+                    <span class="separator">|</span>
+                    <button class="theme-toggle" id="themeToggle" onclick="toggleDarkMode()" title="Toggle dark mode">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Manipur State Archives Logo" class="logo-img" onerror="this.style.display='none'">
+                    <div class="logo-text">
+                        <h1>Manipur State Archives</h1>
+                        <p>Government of Manipur</p>
+                    </div>
+                </div>
+                <nav class="nav" id="nav">
+                    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="#" class="nav-link" onclick="navigateTo('digital-archives'); return false;">Digital Archives</a></li>
+                        <li><a href="#" class="nav-link" onclick="navigateTo('collections'); return false;">Collections</a></li>
+                        <li><a href="#" class="nav-link" onclick="navigateTo('gallery'); return false;">Gallery</a></li>
+                       <li class="notification-nav-item">
+    <a href="#" class="nav-link notification-link" onclick="toggleNotifications(); return false;" aria-label="Notifications">
+        <span class="notification-text">Notifications</span>
+        <span class="notification-badge" id="notificationCount">0</span>
+    </a>
+</li>
+                        <li><a href="#" class="nav-link" onclick="navigateTo('research'); return false;">Research</a></li>
+                        <li><a href="#" class="nav-link" onclick="navigateTo('education'); return false;">Education</a></li>
+                        <li><a href="#" class="nav-link" onclick="navigateTo('services'); return false;">Services</a></li>
+                        <li><a href="#" class="nav-link" onclick="navigateTo('about'); return false;">About</a></li>
+                        <li><a href="#" class="nav-link" onclick="navigateTo('contact'); return false;">Contact</a></li>
+                        <li><a href="#" class="btn-login" onclick="navigateTo('admin-login'); return false;">Admin Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-slider" id="heroSlider">
+                <div class="hero-slide active" style="background-image: url('images/hero-1.jpg');">
+                    <div class="hero-overlay"></div>
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2 class="hero-title">Preserving Our Heritage</h2>
+                            <p class="hero-subtitle">Empowering Our Future</p>
+                            <p class="hero-description">Explore centuries of Manipur's rich history through our digitized archives</p>
+                            <a href="#" class="btn btn-primary btn-large" onclick="navigateTo('digital-archives'); return false;">Explore Archives</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide" style="background-image: url('images/hero-2.jpg');">
+                    <div class="hero-overlay"></div>
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2 class="hero-title">Digital Access to History</h2>
+                            <p class="hero-subtitle">Research From Anywhere</p>
+                            <p class="hero-description">Access thousands of historical documents, photographs, and manuscripts online</p>
+                            <a href="#" class="btn btn-primary btn-large" onclick="navigateTo('digital-archives'); return false;">Start Searching</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide" style="background-image: url('images/hero-3.jpg');">
+                    <div class="hero-overlay"></div>
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2 class="hero-title">Educational Resources</h2>
+                            <p class="hero-subtitle">Learn About Our Past</p>
+                            <p class="hero-description">Discover educational materials, virtual tours, and interactive timelines</p>
+                            <a href="#" class="btn btn-primary btn-large" onclick="navigateTo('education'); return false;">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="hero-nav hero-prev" id="heroPrev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="hero-nav hero-next" id="heroNext" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+            <div class="hero-dots" id="heroDots"></div>
+        </section>
+
+        <!-- Quick Search -->
+        <section class="quick-search">
+            <div class="container">
+                <div class="search-box">
+                    <h3>Search Our Archives</h3>
+                    <form class="search-form" id="quickSearchForm">
+                        <div class="search-input-wrapper">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="quickSearchInput" placeholder="Search documents, photographs, manuscripts..." class="search-input">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                        <a href="search.html" class="advanced-search-link">Advanced Search</a>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Counter -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <!-- Replace the stats section in index.html -->
+<div class="stat-card">
+    <i class="fas fa-file-alt stat-icon"></i>
+    <div class="stat-number" data-target="0">0</div>
+    <div class="stat-label">Documents</div>
+</div>
+<div class="stat-card">
+    <i class="fas fa-images stat-icon"></i>
+    <div class="stat-number" data-target="0">0</div>
+    <div class="stat-label">Photographs</div>
+</div>
+<div class="stat-card">
+    <i class="fas fa-book stat-icon"></i>
+    <div class="stat-number" data-target="0">0</div>
+    <div class="stat-label">Manuscripts</div>
+</div>
+<div class="stat-card">
+    <i class="fas fa-calendar stat-icon"></i>
+    <div class="stat-number" data-target="0">0</div>
+    <div class="stat-label">Years Covered</div>
+</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section class="featured-collections section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Collections</h2>
+                    <p>Explore our curated collections of historical significance</p>
+                </div>
+                <div class="collections-carousel" id="collectionsCarousel">
+                    <div class="collection-card">
+                        <img src="images/collection-royal.jpg" alt="Royal Chronicles" loading="lazy">
+                        <div class="collection-info">
+                            <h3>Royal Chronicles</h3>
+                            <p>Official records and correspondence of Manipur Kingdom rulers from 1709-1947</p>
+                            <div class="collection-meta">
+                                <span><i class="fas fa-file"></i> 342 items</span>
+                                <span><i class="fas fa-calendar"></i> 1709-1947</span>
+                            </div>
+                            <button class="btn btn-secondary" onclick="viewCollectionDetail('COL001')">VIEW COLLECTION</button>
+                        </div>
+                    </div>
+                    <div class="collection-card">
+                        <img src="images/collection-freedom.jpg" alt="Freedom Movement" loading="lazy">
+                        <div class="collection-info">
+                            <h3>Freedom Movement</h3>
+                            <p>Documents related to Manipur's role in India's independence struggle</p>
+                            <div class="collection-meta">
+                                <span><i class="fas fa-file"></i> 218 items</span>
+                                <span><i class="fas fa-calendar"></i> 1930-1950</span>
+                            </div>
+                            <button class="btn btn-secondary" onclick="viewCollectionDetail('COL002')">VIEW COLLECTION</button>
+                        </div>
+                    </div>
+                    <div class="collection-card">
+                        <img src="images/collection-colonial.jpg" alt="Colonial Administration" loading="lazy">
+                        <div class="collection-info">
+                            <h3>Colonial Administration</h3>
+                            <p>British administrative records and correspondence from colonial period</p>
+                            <div class="collection-meta">
+                                <span><i class="fas fa-file"></i> 456 items</span>
+                                <span><i class="fas fa-calendar"></i> 1891-1947</span>
+                            </div>
+                            <button class="btn btn-secondary" onclick="viewCollectionDetail('COL003')">VIEW COLLECTION</button>
+                        </div>
+                    </div>
+                    <div class="collection-card">
+                        <img src="images/collection-cultural.jpg" alt="Cultural Heritage" loading="lazy">
+                        <div class="collection-info">
+                            <h3>Cultural Heritage</h3>
+                            <p>Manuscripts, photographs, and documents related to Manipuri culture</p>
+                            <div class="collection-meta">
+                                <span><i class="fas fa-file"></i> 567 items</span>
+                                <span><i class="fas fa-calendar"></i> 1800-2000</span>
+                            </div>
+                            <button class="btn btn-secondary" onclick="viewCollectionDetail('COL004')">VIEW COLLECTION</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-nav carousel-prev" id="collectionPrev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-nav carousel-next" id="collectionNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="quick-links section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Quick Links</h2>
+                    <p>Access key services and resources</p>
+                </div>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <i class="fas fa-search link-icon"></i>
+                        <h3>Digital Archives</h3>
+                        <p>Search and browse our digitized collection of historical documents</p>
+                        <a href="#" class="link-arrow" onclick="navigateTo('digital-archives'); return false;">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="link-card">
+                        <i class="fas fa-book-open link-icon"></i>
+                        <h3>Research Services</h3>
+                        <p>Access research assistance, finding aids, and consultation services</p>
+                        <a href="#" class="link-arrow" onclick="navigateTo('research'); return false;">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="link-card">
+                        <i class="fas fa-map-marker-alt link-icon"></i>
+                        <h3>Visit Us</h3>
+                        <p>Plan your visit to the archives and explore our reading room</p>
+                        <a href="#" class="link-arrow" onclick="navigateTo('services'); return false;">Plan Visit <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="link-card">
+                        <i class="fas fa-envelope link-icon"></i>
+                        <h3>Contact</h3>
+                        <p>Get in touch with our staff for inquiries and assistance</p>
+                        <a href="#" class="link-arrow" onclick="navigateTo('contact'); return false;">Contact Us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="link-card">
+                        <i class="fas fa-graduation-cap link-icon"></i>
+                        <h3>Education</h3>
+                        <p>Resources for students and teachers, virtual tours, and workshops</p>
+                        <a href="#" class="link-arrow" onclick="navigateTo('education'); return false;">Discover <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="link-card">
+                        <i class="fas fa-hands-helping link-icon"></i>
+                        <h3>Donate Materials</h3>
+                        <p>Contribute to preserving Manipur's heritage by donating documents</p>
+                        <a href="#" class="link-arrow" onclick="showDonationForm(); return false;">Learn How <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News & Events -->
+        <section class="news-events section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>News & Events</h2>
+                    <p>Stay updated with our latest announcements and upcoming events</p>
+                </div>
+                <div class="news-grid" id="newsGrid">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-secondary" onclick="viewAllNews()">VIEW ALL NEWS</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials section bg-primary">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="text-white">What Researchers Say</h2>
+                    <p class="text-white">Experiences from scholars and visitors</p>
+                </div>
+                <div class="testimonials-carousel" id="testimonialsCarousel">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <p>"The Manipur State Archives has been invaluable for my research on colonial history. The digitization efforts have made accessing historical documents much easier."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/avatar-1.jpg" alt="Dr. Anita Sharma">
+                            <div>
+                                <h4>Dr. Anita Sharma</h4>
+                                <p>Historian, Manipur University</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"As a genealogist, I found extensive resources here. The staff was incredibly helpful in locating family records dating back to the 19th century."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/avatar-2.jpg" alt="Rajesh Kumar">
+                            <div>
+                                <h4>Rajesh Kumar</h4>
+                                <p>Independent Researcher</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The archives' educational programs for students are excellent. Virtual tours and interactive materials make history come alive for my students."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/avatar-3.jpg" alt="Priya Devi">
+                            <div>
+                                <h4>Priya Devi</h4>
+                                <p>High School Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-dots" id="testimonialDots"></div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Stay Informed</h2>
+                        <p>Subscribe to our newsletter for updates on new additions, events, and research opportunities</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Manipur State Archives</h3>
+                    <p>Preserving the heritage of Manipur for future generations through careful conservation and accessible digital resources.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" onclick="navigateTo('digital-archives'); return false;">Digital Archives</a></li>
+                        <li><a href="#" onclick="navigateTo('collections'); return false;">Collections</a></li>
+                        <li><a href="#" onclick="navigateTo('research'); return false;">Research</a></li>
+                        <li><a href="#" onclick="navigateTo('education'); return false;">Education</a></li>
+                        <li><a href="#" onclick="navigateTo('services'); return false;">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#" onclick="navigateTo('about'); return false;">About Us</a></li>
+                        <li><a href="#" onclick="showMissionVision(); return false;">Mission & Vision</a></li>
+                        <li><a href="#" onclick="showPolicies(); return false;">Policies</a></li>
+                        <li><a href="#" onclick="showNewsEvents(); return false;">News & Events</a></li>
+                        <li><a href="#" onclick="showFAQ(); return false;">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Palace Compound, Imphal<br>Manipur 795001</li>
+                        <li><i class="fas fa-phone"></i> +91-385-2450888</li>
+                        <li><i class="fas fa-envelope"></i> archives@manipur.gov.in</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 10:00 AM - 5:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Manipur State Archives. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+
+    <div class="notification-overlay" id="notificationOverlay"></div>
+<div class="notification-panel" id="notificationPanel">
+    <div class="notification-header">
+        <h3><i class="fas fa-bell"></i> Notifications</h3>
+        <button class="close-notifications" onclick="closeNotifications()" aria-label="Close notifications">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="notification-list" id="notificationList">
+        <!-- Notifications will be loaded here -->
+    </div>
+    <div class="notification-actions">
+        <button class="notification-action-btn" onclick="markAllAsRead()">Mark all as read</button>
+        <button class="notification-action-btn" onclick="clearAllNotifications()">Clear all</button>
+    </div>
+</div>
+</body>
+
+</html>
