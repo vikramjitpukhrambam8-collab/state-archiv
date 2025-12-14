@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables
+.env
+
+# Database
+data/database.json
+
+# Backups
+backups/
+
+# Uploaded files
+uploads/documents/*
+uploads/thumbnails/*
+uploads/collections/*
+uploads/news/*
+uploads/publications/*
+
+# Keep the folders but ignore contents
+!uploads/documents/.gitkeep
+!uploads/thumbnails/.gitkeep
+!uploads/collections/.gitkeep
+!uploads/news/.gitkeep
+!uploads/publications/.gitkeep
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+tmp/
+temp/
+*.tmp
